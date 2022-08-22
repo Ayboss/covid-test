@@ -1,4 +1,4 @@
-import react, {useEffect} from "react";
+import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux"
 import { getCovidStats } from "./store/action";
 import firstaid from "./assets/firstaid.png";
@@ -11,10 +11,11 @@ import CovidStatTable from "./components/CovidStatTable";
 const Home = ()=>{
     const selector = useSelector((state)=>state.covidstats);
     const dispatch = useDispatch()
-    console.log(selector, "This is the selector");
+    
     useEffect(()=>{
         dispatch(getCovidStats())
     },[])
+
     return(
         <div className="body">
             <div className="card__grid">

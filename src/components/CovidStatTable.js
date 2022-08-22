@@ -11,17 +11,16 @@ const CovidStatTable = ({data})=>{
                 <th>Death</th>
             </tr>
             <tbody>
-            {data?.map((dt)=>{
-                return (
-                    <tr key={dt?._id}>
-                <td>{dt?.state}</td>
-                <td>{dt?.confirmedCases}</td>
-                <td>{dt?.casesOnAdmission}</td>
-                <td>{dt?.discharged}</td>
-                <td>{dt?.death}</td>
-            </tr>
+            {data?.map((dt)=>(
+                <tr key={dt?._id}>
+                    <td>{dt?.state}</td>
+                    <td>{dt?.confirmedCases}</td>
+                    <td>{dt?.casesOnAdmission}</td>
+                    <td>{dt?.discharged}</td>
+                    <td>{dt?.death}</td>
+                </tr>
                 )
-            })}
+            )}
             </tbody>
         </table>
         </div>

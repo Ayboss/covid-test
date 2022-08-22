@@ -1,5 +1,7 @@
 import * as actionsType from './actiontypes';
-export default (state = {covidstats:{}}, action)=>{
+
+const initialState = {}
+export default (state = {covidstats:initialState}, action)=>{
     switch (action.type){
 
         case actionsType.STORE_COVID_DATA:{
